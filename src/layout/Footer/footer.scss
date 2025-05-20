@@ -1,0 +1,85 @@
+#footer {
+  .footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    h1 {
+      font-family: sans-serif;
+      font-weight: 700;
+      font-size: clamp(0.2rem, 1.8vw, 5rem);
+      color: rgba(39, 76, 91, 1);
+    }
+
+    &--line {
+      width: 1px;
+      height: clamp(0.2rem, 19vw, 25rem);
+      background: rgba(212, 212, 212, 1);
+    }
+    &--left {
+      text-align: end;
+      h3 {
+        font-family: sans-serif;
+        font-weight: 700;
+        font-size: clamp(0.2rem, 1vw, 5rem);
+        text-align: right;
+        color: rgba(82, 92, 96, 1);
+        margin-top: 15px;
+      }
+      h4 {
+        font-family: sans-serif;
+        font-weight: 400;
+        font-size: clamp(0.2rem, 1vw, 5rem);
+        color: rgba(82, 92, 96, 1);
+        text-align: right;
+        margin-bottom: 15px;
+      }
+    }
+    &--center {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: clamp(0.2rem, 1.8vw, 5rem);
+      img {
+        width: clamp(0.5rem, 12vw, 25rem);
+      }
+      p {
+        font-family: sans-serif;
+        font-weight: 400;
+        font-size: clamp(0.1rem, 1vw, 5rem);
+        line-height: 26px;
+        color: rgba(82, 92, 96, 1);
+        text-align: center;
+      }
+      &__icons {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: clamp(0.2rem, 1.1vw, 5rem);
+        a {
+          width: clamp(0.2rem, 3vw, 5rem);
+          height: clamp(0.2rem, 3vw, 5rem);
+          background: rgba(239, 246, 241, 1);
+          color: rgba(39, 76, 91, 1);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 50%;
+          font-size: clamp(0.2rem, 1.2vw, 5rem);
+        }
+      }
+    }
+    &--right {
+      h1 {
+        margin-bottom: 10px;
+      }
+      h4 {
+        font-family: sans-serif;
+        font-weight: 400;
+        font-size: clamp(0.2rem, 1vw, 5rem);
+        color: rgba(82, 92, 96, 1);
+        margin-top: 15px;
+      }
+    }
+  }
+}

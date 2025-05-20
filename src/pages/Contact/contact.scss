@@ -1,0 +1,204 @@
+#contact {
+  .contact--bg {
+    width: 100%;
+    height: clamp(20rem, 20vw, 90rem);
+  }
+  .contact {
+    &--block1 {
+      margin: clamp(2rem, 8vw, 10rem) 0;
+      display: flex;
+      align-items: center;
+      gap: clamp(1rem, 5vw, 10rem);
+      img {
+        border-radius: 20px;
+      }
+      &__text {
+        display: flex;
+        gap: clamp(0.2rem, 2vw, 5rem);
+        flex-direction: column;
+        h1 {
+          font-family: sans-serif;
+          font-weight: 800;
+          font-size: clamp(0.2rem, 2vw, 2rem);
+          color: rgba(39, 76, 91, 1);
+          margin: clamp(0.2rem, 1vw, 2rem) 0;
+        }
+        p {
+          font-family: sans-serif;
+          font-weight: 400;
+          font-size: clamp(0.2rem, 1vw, 2rem);
+          color: rgba(39, 76, 91, 1);
+          line-height: clamp(0.2rem, 1.5vw, 2rem);
+        }
+        &--card {
+          padding: 0 0 0 10px;
+          display: flex;
+          align-items: center;
+          gap: clamp(0.1rem, 1vw, 2rem);
+          width: 170px;
+          height: 60px;
+          background: transparent;
+          border: 1px solid rgba(39, 76, 91, 1);
+          border-radius: 10px;
+          h2 {
+            font-family: sans-serif;
+            font-weight: 800;
+            font-size: clamp(0.2rem, 0.8vw, 2rem);
+            color: rgba(39, 76, 91, 1);
+            margin: clamp(0.2rem, 1vw, 2rem) 0;
+            span {
+              font-size: clamp(0.2rem, 0.7vw, 2rem);
+              color: rgba(82, 92, 96, 1);
+              font-weight: 400;
+            }
+          }
+          a {
+            width: 30px;
+            height: 30px;
+            background: rgba(244, 244, 244, 1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 5px;
+            color: rgba(126, 182, 147, 1);
+          }
+        }
+        &--icon {
+          display: flex;
+          align-items: center;
+          gap: clamp(0.2rem, 1.5vw, 2rem);
+          h3 {
+            color: rgba(39, 76, 91, 1);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(239, 246, 241, 1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+        }
+      }
+    }
+    &--block2 {
+      width: 100%;
+      height: clamp(20rem, 38vw, 90rem);
+      border-radius: clamp(0.5rem, 3vw, 10rem);
+      position: relative;
+      &__text {
+        width: clamp(5rem, 28vw, 50rem);
+        height: clamp(5rem, 28vw, 50rem);
+        background: white;
+        border-radius: clamp(0.5rem, 2vw, 10rem);
+        position: absolute;
+        top: 15%;
+        right: 10%;
+        padding: 30px 35px;
+        h1 {
+          font-family: sans-serif;
+          font-weight: 800;
+          font-size: clamp(0.2rem, 1.8vw, 2rem);
+          color: rgba(39, 76, 91, 1);
+          margin: clamp(0.2rem, 1vw, 2rem) 0;
+        }
+        p {
+          font-family: sans-serif;
+          font-weight: 400;
+          font-size: clamp(0.2rem, 1vw, 2rem);
+          color: rgba(39, 76, 91, 1);
+          line-height: clamp(0.2rem, 1.5vw, 2rem);
+        }
+        &--card {
+          padding: 0 0 0 10px;
+          display: flex;
+          align-items: center;
+          gap: clamp(0.1rem, 0.3vw, 2rem);
+          width: 200px;
+          height: 80px;
+          background: transparent;
+          border: 1px solid rgba(39, 76, 91, 1);
+          border-radius: 10px;
+          margin-top: 20px;
+          h4 {
+            font-family: sans-serif;
+            font-weight: 800;
+            font-size: clamp(0.2rem, 0.8vw, 2rem);
+            color: rgba(39, 76, 91, 1);
+            margin: clamp(0.2rem, 1vw, 2rem) 0;
+            span {
+              font-size: clamp(0.2rem, 0.8vw, 2rem);
+              color: rgba(82, 92, 96, 1);
+              font-weight: 400;
+            }
+          }
+          h3 {
+            font-size: clamp(0.2rem, 2vw, 2rem);
+            color: rgba(126, 182, 147, 1);
+          }
+        }
+      }
+    }
+
+    &--block3 {
+      margin: clamp(5rem, 10vw, 20rem) 0;
+      display: flex;
+      align-items: start;
+      justify-content: start;
+      flex-direction: column;
+      gap: clamp(0.2rem, 2vw, 5rem);
+
+      &__card1 {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        h1 {
+          font-family: sans-serif;
+          font-weight: 700;
+          font-size: clamp(0.2rem, 1.5vw, 2rem);
+          color: rgba(39, 76, 91, 1);
+          margin: clamp(0.2rem, 1vw, 2rem) 0;
+        }
+        input {
+          padding: clamp(0.2rem, 1.5vw, 8rem) clamp(0.2rem, 22vw, 40rem)
+            clamp(0.2rem, 1.5vw, 5rem) clamp(0.2rem, 5vw, 2rem);
+          border-radius: clamp(0.2rem, 1vw, 2rem);
+          border: 1px solid rgba(126, 182, 147, 1);
+        }
+      }
+      &__card2 {
+        h1 {
+          font-family: sans-serif;
+          font-weight: 700;
+          font-size: clamp(0.2rem, 1.5vw, 2rem);
+          color: rgba(39, 76, 91, 1);
+          margin: clamp(0.2rem, 1vw, 2rem) 0;
+        }
+        input {
+          padding: clamp(0.2rem, 5vw, 6rem) clamp(0.2rem, 61vw, 90rem)
+            clamp(0.2rem, 12vw, 20rem) clamp(0.2rem, 5vw, 2rem);
+          border-radius: clamp(0.2rem, 1vw, 2rem);
+          border: 1px solid rgba(126, 182, 147, 1);
+        }
+      }
+      button {
+        padding: clamp(0.1rem, 1vw, 2rem) clamp(1rem, 1.5vw, 22rem);
+        background: rgba(39, 76, 91, 1);
+        display: flex;
+        align-items: center;
+        color: white;
+        border: none;
+        border-radius: 13px;
+        margin-top: clamp(0.2rem, 1vw, 2rem);
+        font-size: clamp(0.2rem, 1vw, 2rem);
+      }
+    }
+    &--block6 {
+      height: clamp(2rem, 15vw, 40rem);
+      border-radius: clamp(0.2rem, 2vw, 10rem);
+      margin-top: clamp(2rem, 10vw, 40rem);
+      margin-bottom: clamp(2rem, 15vw, 40rem);
+      padding-bottom: 40px;
+    }
+  }
+}

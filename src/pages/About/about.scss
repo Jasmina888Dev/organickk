@@ -1,0 +1,238 @@
+#about {
+  .about--bg {
+    width: 100%;
+    height: clamp(20rem, 20vw, 90rem);
+  }
+  .about {
+    &--block1 {
+      display: flex;
+      align-items: center;
+      gap: clamp(1rem, 7vw, 10rem);
+      margin-bottom: clamp(2rem, 10vw, 12rem);
+      margin-top: clamp(2rem, 8vw, 10rem);
+      &__text {
+        h1 {
+          font-family: sans-serif;
+          font-weight: 800;
+          font-size: clamp(0.2rem, 1.8vw, 2rem);
+          color: rgba(39, 76, 91, 1);
+          margin: clamp(0.2rem, 1vw, 2rem) 0;
+        }
+        p {
+          font-family: sans-serif;
+          font-weight: 400;
+          font-size: clamp(0.2rem, 1vw, 2rem);
+          color: rgba(39, 76, 91, 1);
+          line-height: clamp(0.2rem, 1.5vw, 2rem);
+        }
+
+        &--card {
+          display: flex;
+          margin-top: clamp(0.2rem, 1vw, 2rem);
+          h5 {
+            display: flex;
+            align-items: center;
+            span {
+              font-family: sans-serif;
+              font-weight: 500;
+              font-size: clamp(0.2rem, 1vw, 4rem);
+              padding-left: 10px;
+            }
+            margin: 0 clamp(0.2rem, 1vw, 2rem) 0 0;
+          }
+        }
+        button {
+          padding: clamp(0.1rem, 1vw, 2rem) clamp(1rem, 1.5vw, 22rem);
+          background: rgba(39, 76, 91, 1);
+          display: flex;
+          align-items: center;
+          color: white;
+          border: none;
+          border-radius: 13px;
+          margin-top: clamp(0.2rem, 1vw, 2rem);
+          font-size: clamp(0.2rem, 1vw, 2rem);
+        }
+      }
+    }
+    &--block23 {
+      margin-bottom: clamp(1rem, 5vw, 6rem);
+      background: rgba(249, 248, 248, 1);
+      width: 100%;
+      height: clamp(12rem, 50vw, 100rem);
+
+      &__block2 {
+        margin-bottom: clamp(2rem, 8vw, 10rem);
+        display: flex;
+        align-items: center;
+        gap: clamp(1rem, 7vw, 10rem);
+        &--text {
+          h1 {
+            font-family: sans-serif;
+            font-weight: 800;
+            font-size: clamp(0.2rem, 1.8vw, 2rem);
+            color: rgba(39, 76, 91, 1);
+            margin: clamp(0.2rem, 1vw, 2rem) 0;
+          }
+          p {
+            font-family: sans-serif;
+            font-weight: 400;
+            font-size: clamp(0.2rem, 1vw, 2rem);
+            color: rgba(39, 76, 91, 1);
+            line-height: clamp(0.2rem, 1.5vw, 2rem);
+          }
+          button {
+            padding: clamp(0.1rem, 1vw, 2rem) clamp(1rem, 1.5vw, 22rem);
+            background: rgba(236, 236, 236, 1);
+            display: flex;
+            align-items: center;
+            color: white;
+            border: none;
+            border-radius: 13px;
+            margin-top: clamp(0.2rem, 1vw, 2rem);
+            font-size: clamp(0.2rem, 0.8vw, 2rem);
+            color: rgba(39, 76, 91, 1);
+          }
+          h6 {
+            margin-left: clamp(0.2rem, 1.5vw, 2rem);
+            margin-top: clamp(0.2rem, 1vw, 2rem);
+            font-family: sans-serif;
+            font-family: Open Sans;
+            font-weight: 400;
+            font-size: clamp(0.2rem, 0.8vw, 2rem);
+            color: rgba(39, 76, 91, 1);
+          }
+        }
+      }
+      &__block3 {
+        margin-bottom: clamp(0.2rem, 5.6vw, 6rem);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: clamp(1rem, 5.4vw, 10rem);
+        &--card3 {
+          width: clamp(2rem, 10vw, 20rem);
+          height: clamp(2rem, 14vw, 20rem);
+          background: rgb(248, 244, 244);
+          border: none;
+          border-radius: 20px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          h2 {
+            font-family: sans-serif;
+            font-weight: 800;
+            font-size: clamp(0.2rem, 1vw, 2rem);
+            color: rgba(39, 76, 91, 1);
+            margin: clamp(0.2rem, 0.8vw, 2rem) 0;
+          }
+          p {
+            font-family: sans-serif;
+            font-weight: 400;
+            font-size: clamp(0.2rem, 0.9vw, 2rem);
+            text-align: center;
+          }
+        }
+      }
+    }
+    &--block4 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: clamp(0.2rem, 0.5vw, 2rem);
+      margin-bottom: clamp(0.2rem, 3.5vw, 4rem);
+      h1 {
+        font-family: sans-serif;
+        font-weight: 800;
+        font-size: clamp(0.5rem, 2.5vw, 4rem);
+        color: rgba(39, 76, 91, 1);
+        margin: clamp(0.2rem, 1vw, 2rem) 0;
+      }
+      p {
+        font-family: sans-serif;
+        font-weight: 400;
+        font-size: clamp(0.2rem, 1vw, 2rem);
+        color: rgba(39, 76, 91, 1);
+        line-height: clamp(0.2rem, 1.5vw, 2rem);
+      }
+      &__cards {
+        width: clamp(10rem, 25vw, 40rem);
+        height: clamp(10rem, 40vw, 60rem);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: clamp(0.2rem, 1.3vw, 2rem);
+
+        background: rgba(255, 255, 255, 1);
+        border-top-right-radius: 15px;
+        border-top-left-radius: 15px;
+        &--card1 {
+          h2 {
+            font-family: sans-serif;
+            font-weight: 800;
+            font-size: clamp(0.2rem, 1.5vw, 4rem);
+            color: rgba(39, 76, 91, 1);
+            margin: clamp(0.2rem, 1vw, 2rem) 0;
+          }
+          &__text {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            h4 {
+              margin-top: clamp(0.5rem, 1vw, 4rem);
+              font-size: clamp(0.2rem, 1.3vw, 4rem);
+              color: rgba(39, 76, 91, 1);
+              span {
+                padding-left: clamp(0.2rem, 1vw, 4rem);
+              }
+            }
+          }
+        }
+      }
+    }
+    &--block5 {
+      width: 100%;
+      height: clamp(10rem, 35vw, 40rem);
+      background: rgba(39, 76, 91, 1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: clamp(0.2rem, 1.2vw, 5rem);
+      margin-bottom: clamp(0.2rem, 3.5vw, 4rem);
+      h1 {
+        font-family: sans-serif;
+        font-weight: 800;
+        font-size: clamp(0.5rem, 2vw, 4rem);
+        color: rgba(255, 255, 255, 1);
+        margin: clamp(0.2rem, 1vw, 2rem) 0;
+      }
+      &__card {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: clamp(0.2rem, 2vw, 5rem);
+        &--card1 {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          gap: clamp(0.2rem, 2vw, 5rem);
+          h5 {
+            font-family: sans-serif;
+            font-weight: 500;
+            font-size: clamp(0.2rem, 1.2vw, 4rem);
+            color: white;
+          }
+        }
+      }
+    }
+    &--block6 {
+      height: clamp(2rem, 15vw, 40rem);
+      border-radius: clamp(0.2rem, 2vw, 10rem);
+      margin-top: clamp(2rem, 10vw, 40rem);
+      margin-bottom: clamp(2rem, 15vw, 40rem);
+    }
+  }
+}
