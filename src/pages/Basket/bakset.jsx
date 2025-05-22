@@ -1,10 +1,12 @@
 import React, { useEffect } from "react";
 import { useContext } from "react";
 import { ProductContext } from "../../context/context";
-import { TiDelete } from "react-icons/ti";
+import { useNavigate } from "react-router-dom";
+import { MdOutlineClose } from "react-icons/md";
 
 const Basket = () => {
   const { basket, setBasket } = useContext(ProductContext);
+  const nav = useNavigate();
 
   function delPro(Id) {
     let res = basket.filter((el) => {
@@ -15,7 +17,6 @@ const Basket = () => {
   }
 
   useEffect(() => {
-    delPro(basket);
     window.scroll(0, 0);
   }, []);
 
@@ -29,16 +30,13 @@ const Basket = () => {
                 <img src={el.image} alt="img" width={100} />
                 <h1>{el.title}</h1>
                 <div className="basket--content__block--count">
-                  <h2> {el.price}</h2>
-                  <div className="basket--content__block--count__quantity">
-                    <button>-</button>
-                    <h5>{el.quantity}</h5>
-                    <button>+</button>
-                  </div>
+                  <h2> {el.price}$</h2>
                 </div>
-                <button>{el.category}</button>
+                <button onClick={() => nav(`/category/${el.category}`)}>
+                  {el.category}
+                </button>
                 <a onClick={() => delPro(el._id)}>
-                  <TiDelete />
+                  <MdOutlineClose />
                 </a>
               </div>
             ))}

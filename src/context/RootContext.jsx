@@ -8,11 +8,12 @@ const RooteContext = ({ children }) => {
 
   async function getShop() {
     let res = await axios(
-      `https://6808b873942707d722df6f9b.mockapi.io/api/v1/organick`
+      `https://api-crud.elcho.dev/api/v1/f2073-3a725-0a2d9/organick`
     );
-    let { data } = res;
+    let { data } = res.data;
     setProducts(data);
   }
+  
 
   function getBasket() {
     let res = JSON.parse(localStorage.getItem("basket")) || [];

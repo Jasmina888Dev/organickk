@@ -191,6 +191,13 @@
         border-radius: 13px;
         margin-top: clamp(0.2rem, 1vw, 2rem);
         font-size: clamp(0.2rem, 1vw, 2rem);
+        transition: 0.8s;
+        &:hover {
+          background: transparent;
+          transform: translate(1.3);
+          border: 2px solid rgba(39, 76, 91, 1);
+          color: rgba(39, 76, 91, 1);
+        }
       }
     }
     &--block6 {

@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import banner1 from "../../assets/images/detailBanner.jpg";
 import { FaCircleArrowRight } from "react-icons/fa6";
 import Product from "../../ui/Product/product";
@@ -11,17 +11,19 @@ const Details = () => {
   const { Id } = useParams();
   const [details, setDetails] = useState();
   const [category, setCategory] = useState([]);
+  const nav = useNavigate()
+
 
   async function getShop() {
     let res = await axios(
-      `https://6808b873942707d722df6f9b.mockapi.io/api/v1/organick`
+      `https://api-crud.elcho.dev/api/v1/f2073-3a725-0a2d9/organick`
     );
-    let { data } = res;
-    let result = data.find((el) => el.id == Id);
+    let { data } = res.data
+    let result = data.find((el) => el._id == Id);
+
     setCategory(data);
     setDetails(result);
   }
- 
 
   useEffect(() => {
     getShop();
@@ -73,7 +75,7 @@ const Details = () => {
               <div className="details--product__cardText--count">
                 <h1>Quantity :</h1>
                 <button className="btn1">1</button>
-                <button className="add">
+                <button className="add" onClick={() => nav("/basket")}>
                   Add To Cart <FaCircleArrowRight />
                 </button>
               </div>

@@ -35,13 +35,12 @@ const Main = () => {
   const [count, setCount] = useState(4);
   const [count1, setCount1] = useState(4);
   const [product, setProduct] = useState([]);
-  // const {products, setProducts}
 
   async function getShop() {
     let res = await axios(
-      `https://6808b873942707d722df6f9b.mockapi.io/api/v1/organick`
+      `https://api-crud.elcho.dev/api/v1/f2073-3a725-0a2d9/organick`
     );
-    let { data } = res;
+    let { data } = res.data;
     setProduct(data);
   }
 
@@ -72,7 +71,7 @@ const Main = () => {
     getShop();
     window.scroll(0, 0);
     AOS.init({
-      duration: 1500,
+      duration: 2000,
       once: true,
     });
   }, []);
@@ -491,6 +490,8 @@ const Main = () => {
         </div>
         <div
           className="main--block8"
+          data-aos="fade-up"
+          data-aos-duration="3000"
           style={{
             backgroundImage: `url(${newPhoto})`,
             backgroundSize: "cover",

@@ -40,7 +40,7 @@ const Product = ({ product }) => {
               {someBasket ? <AiOutlineMinusCircle /> : <IoAddCircleOutline />}
             </h5>
             <button>{product.category}</button>
-            <Link to={`/details/${product.id}`}>
+            <Link to={`/details/${product._id}`}>
               <img
                 src={product.image}
                 alt="img"

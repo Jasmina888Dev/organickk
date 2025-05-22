@@ -11,7 +11,7 @@ const Admin = () => {
 
   async function getAdmin() {
     let newProduct = {
-      // id: Date.now(),
+      id: Date.now(),
       image: proUrl,
       title: proName,
       description: proDes,
@@ -22,7 +22,7 @@ const Admin = () => {
     };
 
     axios.post(
-      `https://6808b873942707d722df6f9b.mockapi.io/api/v1/organick`,
+      `https://api-crud.elcho.dev/api/v1/f2073-3a725-0a2d9/organick`,
       newProduct
     );
     setProUrl("");

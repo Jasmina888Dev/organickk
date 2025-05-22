@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import banner from "../../assets/images/Banner.png";
 import image from "../../assets/images/Image1.png";
 import AboutUs from "../../assets/images/AboutUs.svg";
@@ -21,6 +21,12 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 const About = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 3000,
+      once: true,
+    });
+  }, []);
   return (
     <div id="about">
       <div
@@ -38,6 +44,7 @@ const About = () => {
             <img
               src={image}
               alt="img"
+              data-aos="fade-right"
               style={{
                 width: "clamp(10rem, 45vw, 80rem)",
               }}
@@ -135,6 +142,7 @@ const About = () => {
               <img
                 src={image4}
                 alt="img"
+                data-aos="fade-left"
                 style={{
                   width: "clamp(7rem, 32vw, 40rem)",
                 }}
@@ -351,6 +359,8 @@ const About = () => {
 
           <div
             className="about--block6"
+            data-aos="fade-up"
+            data-aos-duration="3000"
             style={{
               backgroundImage: `url(${NewImg})`,
               backgroundSize: "cover",

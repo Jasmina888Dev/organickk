@@ -21,9 +21,9 @@
         border-radius: 15px;
         margin-bottom: 10px;
         a {
-          margin-right: 8px;
+          margin-right: 10px;
           font-size: 25px;
-          color: red;
+          color: black;
         }
         h1 {
           margin: clamp(0.2rem, 1vw, 4rem) 0;
@@ -39,6 +39,12 @@
           background: transparent;
           border: 2px solid #212a2e;
           border-radius: 10px;
+          transition: 0.8s;
+          &:hover {
+            background: #1e4a5f;
+            color: white;
+            transform: translate(1.3);
+          }
         }
         &--count {
           display: flex;

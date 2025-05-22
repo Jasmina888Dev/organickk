@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import contactBanner from "../../assets/images/contactBanner.png";
 import contact1 from "../../assets/images/contact1.jpg";
 import contact2 from "../../assets/images/contact2.png";
@@ -15,6 +15,8 @@ import {
 } from "react-icons/fa";
 import { CiLocationOn } from "react-icons/ci";
 import axios from "axios";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Contact = () => {
   const [name, setName] = useState("");
@@ -28,8 +30,7 @@ const Contact = () => {
     const token = `7817004799:AAGp9DB2ywL_96_XqKMGqzlQ_RTwdPvQWl8`;
     const api_key = `https://api.telegram.org/bot${token}/sendMessage`;
 
-    if (!name || !email || !company || !subject || !massege 
-    ) {
+    if (!name || !email || !company || !subject || !massege) {
       toast.error("🦄 Error!", {
         position: "top-right",
         autoClose: 5000,
@@ -40,30 +41,28 @@ const Contact = () => {
         progress: undefined,
         theme: "colored",
       });
-    }
-
-   else {
-    const userData = {
-      chat_id: my_id,
-      parse_model: "html",
-      text: ` Заказ: \n
+    } else {
+      const userData = {
+        chat_id: my_id,
+        parse_model: "html",
+        text: ` Заказ: \n
       Full Name: ${name}
       Your Email: ${email}
       Company: ${company}
       Subject: ${subject}
       Message: ${massege}
       `,
-    }; 
+      };
 
-    axios.post(api_key, userData);
+      axios.post(api_key, userData);
 
-    setName("");
-    setEmail("");
-    setCompany("");
-    setSubjrct("");
-    setMessage("");
-    sacMesage()
-   }
+      setName("");
+      setEmail("");
+      setCompany("");
+      setSubjrct("");
+      setMessage("");
+      sacMesage();
+    }
   }
 
   const sacMesage = () => {
@@ -78,6 +77,12 @@ const Contact = () => {
       theme: "colored",
     });
   };
+  useEffect(() => {
+    AOS.init({
+      duration: 3000,
+      once: true,
+    });
+  }, []);
 
   // 7817004799:AAGp9DB2ywL_96_XqKMGqzlQ_RTwdPvQWl8
   return (
@@ -94,7 +99,7 @@ const Contact = () => {
       <div className="container">
         <div className="contact">
           <div className="contact--block1">
-            <img src={contact1} alt="img" width={470} />
+            <img src={contact1} alt="img" data-aos="fade-right" width={470} />
             <div className="contact--block1__text">
               <h1>
                 We'd love to talk about how we <br /> can work together.
@@ -236,6 +241,8 @@ const Contact = () => {
 
           <div
             className="contact--block6"
+            data-aos="fade-up"
+            data-aos-duration="3000"
             style={{
               backgroundImage: `url(${NewImg})`,
               backgroundSize: "cover",
